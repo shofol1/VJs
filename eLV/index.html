@@ -19,7 +19,10 @@
     <div id="app">
       <div id="canvas" @mousemove="over">({{ log.x }},{{ log.y }})</div>
       <br />
-      <input type="text" v-model="name" />
+      <input type="text" v-model="name" /> <br />
+      <br />
+      <!-- modifier -->
+      <button @click.alt="modifier">Click Enter</button>
     </div>
 
     <script src="app.js"></script>

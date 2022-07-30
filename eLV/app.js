@@ -15,5 +15,8 @@ createApp({
       this.log.x = e.offsetX;
       this.log.y = e.offsetY;
     },
+    modifier(e) {
+      console.log("enter btn clicked");
+    },
   },
 }).mount("#app");

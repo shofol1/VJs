@@ -9,7 +9,7 @@ createApp({
       persons: [
         { name: "shofol", age: 24 },
         { name: "shanto", age: 25 },
-        { name: "shofol", age: 23 },
+        { name: "sohan", age: 23 },
       ],
       newPerson: {},
     };
@@ -27,6 +27,9 @@ createApp({
     addPerson() {
       this.persons.push({ name: this.newPerson.name, age: 23 });
       this.newPerson = "";
+    },
+    removePerson(i) {
+      this.persons.splice(i, 1);
     },
   },
 }).mount("#app");

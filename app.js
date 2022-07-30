@@ -4,7 +4,7 @@ createApp({
   data: function () {
     return {
       message: "hello",
-      name: "",
+      name: "shofol",
       info: {
         name: ["shofol", "shanto"],
         gitLink: "https://github.com/shofol1/VJs",

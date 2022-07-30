@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Bind</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <button :class="{active:activeClass=='red'}" @click="setColor('red')">
+        red
+      </button>
+      <button :class="{active:activeClass=='green'}" @click="setColor('green')">
+        green
+      </button>
+      <button
+        :class="{active:activeClass=='yellow'}"
+        @click="setColor('yellow')"
+      >
+        yellow
+      </button>
+
+      <div :class="activeClass"></div>
+      <br /><br />
+      <input type="text" v-model="bgColor" /><br /><br />
+      <input type="text" v-model="textColor" /><br /><br />
+      <input type="color" v-model="bgColor" />
+
+      <h3 :style="{backgroundColor:bgColor,color:textColor}">Hello</h3>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

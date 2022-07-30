@@ -22,7 +22,24 @@
       <input type="text" v-model="name" /> <br />
       <br />
       <!-- modifier -->
-      <button @click.alt="modifier">Click Enter</button>
+      <button @click.alt="modifier">Click Enter</button> <br />
+      <br />
+
+      <!-- else if  -->
+
+      <button @click="makeTrue">Make true</button>
+      <button @click="makeFalse">Make false</button>
+      <div class="condition" v-if="condition">Condition true</div>
+
+      <!-- //loop  -->
+      <div>
+        <ul v-for="person in persons">
+          <li>{{ person }}</li>
+        </ul>
+        <ol v-for="hotel in hotels">
+          <li>{{ hotel.name }} || {{ hotel.roomNo }} || {{ hotel.person }}</li>
+        </ol>
+      </div>
     </div>
 
     <script src="app.js"></script>

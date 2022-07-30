@@ -7,7 +7,26 @@ createApp({
         x: 0,
         y: 0,
       },
-      name: "shofol",
+      nameP: "shofol",
+      condition: "",
+      persons: ["shofol", "shanto", "sohan"],
+      hotels: [
+        {
+          name: "peach-valley",
+          roomNo: "420",
+          person: 2,
+        },
+        {
+          name: "water-valley",
+          roomNo: "420",
+          person: 2,
+        },
+        {
+          name: "Nicee-valley",
+          roomNo: "420",
+          person: 2,
+        },
+      ],
     };
   },
   methods: {
@@ -17,6 +36,12 @@ createApp({
     },
     modifier(e) {
       console.log("enter btn clicked");
+    },
+    makeTrue() {
+      this.condition = true;
+    },
+    makeFalse() {
+      this.condition = false;
     },
   },
 }).mount("#app");

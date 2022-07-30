@@ -36,6 +36,25 @@
           </p>
         </li>
       </ol>
+      <table style="border: 1px solid black">
+        <tr v-for="(value,key,i) in aboutMe" :key="value">
+          <th style="border: 1px solid black">{{ i+1 }}</th>
+          <td style="border: 1px solid black">{{ value }}</td>
+        </tr>
+      </table>
+
+      <p>
+        <template v-for="(value,key,i) in aboutMe">
+          {{ value }}<span v-if="i<3">,</span>
+        </template>
+      </p>
+      <input type="text" name="" v-model="review" />
+      {{ totalCount }}
+
+      <h1>Experienced</h1>
+      <ol>
+        <li v-for="e in elder">{{ e.name }},{{ e.age }}</li>
+      </ol>
     </div>
     <script src="./app.js"></script>
   </body>

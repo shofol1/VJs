@@ -4,6 +4,7 @@ createApp({
   data: function () {
     return {
       name: "hello",
+      review: "",
       newSkill: "",
       skills: ["React", "javascript", "Html", "MERN Stack"],
       persons: [
@@ -11,8 +12,26 @@ createApp({
         { name: "shanto", age: 25 },
         { name: "sohan", age: 23 },
       ],
+      aboutMe: {
+        name: "shofol",
+        address: "saidpur",
+        phone: "01873827783",
+        gender: "Male",
+      },
       newPerson: {},
     };
+  },
+  computed: {
+    totalCount() {
+      console.log("called total");
+      return this.persons.length;
+    },
+    elder() {
+      const el = this.persons.filter((item) => {
+        return item.age > 23;
+      });
+      return el;
+    },
   },
   methods: {
     addNew() {

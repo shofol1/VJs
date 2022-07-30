@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List binding</title>
+    <script src="https://unpkg.com/vue@3"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>List Binding App</h1>
+      <br />
+      <input type="text" v-model="newSkill" /><br /><br />
+
+      <button @click="addNew()">Add skill</button> <br />
+
+      <h2>Lists Here</h2>
+      <ol>
+        <li v-for="(skill,i) in skills" @click="removeSkill(i)">{{ skill }}</li>
+      </ol>
+      <br /><br />
+
+      <input type="text" v-model="newPerson.name" /> <br /><br />
+      <button @click="addPerson()">Add Person</button>
+      <h3>Persons list</h3>
+      <ol>
+        <li v-for="(person,i) in persons">
+          {{ person.name }}({{ person.age }})
+        </li>
+      </ol>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -8,8 +8,9 @@
     <script src="https://unpkg.com/vue@3"></script>
   </head>
   <body>
-    <div class="app">
-      <div id="app">{{ info.name[0] }}</div>
+    <div id="app">
+      <h1>{{ info.name[0] }}</h1>
+      <a target="_blank" :href="info.gitLink">Go to gitHub</a>
     </div>
 
     <script src="./app.js"></script>

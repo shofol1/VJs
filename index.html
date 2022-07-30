@@ -10,7 +10,18 @@
   <body>
     <div id="app">
       <h1>{{ info.name[0] }}</h1>
-      <a target="_blank" :href="info.gitLink">Go to gitHub</a>
+      <!-- <a target="_blank" :href="info.gitLink">Go to gitHub</a> -->
+      <p v-html="html_code"></p>
+
+      <!-- counter  -->
+
+      <h1>{{ count }}</h1>
+      <button @click="increment(2)">+</button>
+      <button @click="decrement">-</button>
+
+      <input type="text" @keyup.enter="test($event)" />
+
+      {{ name }}
     </div>
 
     <script src="./app.js"></script>
